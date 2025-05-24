@@ -1,0 +1,305 @@
+/* Custom CSS */
+body {
+     padding-top: 70px;
+     position: relative;
+     min-height: 100vh;
+     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.fixed-navbar {
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     z-index: 1030;
+}
+
+.logo {
+     width: 65px;
+     height: 65px;
+     margin-left: 20px;
+}
+
+
+
+/* Social Media Icons - Desktop Version */
+.social-icons-desktop {
+     position: fixed;
+     right: 0;
+     top: 50%;
+     transform: translateY(-50%);
+     z-index: 1000;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     padding-right: 5px;
+}
+
+/* Social Media Icons - Mobile Version */
+.social-icons-mobile {
+     position: fixed;
+     right: 0;
+     top: 50%;
+     transform: translateY(-50%);
+     z-index: 1000;
+     display: flex;
+     flex-direction: column;
+     gap: 8px;
+     padding-right: 5px;
+}
+
+.social-icons-desktop a,
+.social-icons-mobile a {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: white;
+     text-decoration: none;
+     transition: all 0.3s ease;
+}
+
+.social-icons-desktop a {
+     width: 50px;
+     height: 50px;
+     border-radius: 50% 0 0 50%;
+     box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons-mobile a {
+     width: 38px;
+     height: 38px;
+     border-radius: 50% 0 0 50%;
+     box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons-desktop a:hover {
+     width: 55px;
+}
+
+.social-icons-mobile a:hover {
+     transform: scale(1.1);
+}
+
+.facebook {
+     background-color: #3b5998;
+}
+
+.instagram {
+     background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.youtube {
+     background-color: #ff0000;
+}
+
+.linkedin {
+     background-color: #0077b5;
+}
+
+.carousel-item img {
+     height: 550px;
+     width: 100;
+     object-fit: fill;
+
+}
+
+/* Show/hide based on screen size */
+@media (min-width: 769px) {
+     .social-icons-mobile {
+          display: none;
+     }
+}
+
+@media (max-width: 768px) {
+     .social-icons-desktop {
+          display: none;
+     }
+
+     .carousel-item img {
+          height: 300px;
+     }
+
+     body {
+          padding-bottom: 70px;
+     }
+}
+
+/* Enhanced Dropdown Styles */
+.dropdown-menu {
+     border: none;
+     background-color: #ffffffd8;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.409);
+     opacity: 0;
+     visibility: hidden;
+     transition: all 0.3s ease;
+     transform: translateY(10px);
+     display: block;
+     margin-top: 0;
+}
+
+.dropdown-menu.show {
+     opacity: 1;
+     visibility: visible;
+     transform: translateY(0);
+}
+
+.dropdown-item {
+     transition: all 0.2s ease;
+     border-radius: 4px;
+     margin: 2px 5px;
+     width: auto;
+     padding: 8px 12px;
+}
+
+.dropdown-item:hover {
+     background-color: rgba(25, 135, 84, 0.1);
+     transform: translateX(5px);
+}
+
+.dropdown-toggle::after {
+     transition: transform 0.2s ease;
+}
+
+.dropdown-toggle.show::after {
+     transform: rotate(-180deg);
+}
+
+/* Mobile-specific dropdown fixes */
+@media (max-width: 768px) {
+     .navbar-nav {
+          padding: 10px 0;
+     }
+
+     .dropdown-menu {
+          position: static;
+          float: none;
+          width: 100%;
+          margin-top: 0;
+          box-shadow: none;
+          border: none;
+          background-color: rgba(25, 135, 84, 0.05);
+          display: none;
+          opacity: 1;
+          visibility: visible;
+          transform: none;
+     }
+
+     .dropdown-menu.show {
+          display: block;
+     }
+
+     .dropdown-item {
+          padding: 8px 20px;
+          border-left: 3px solid transparent;
+          transition: all 0.2s;
+     }
+
+     .dropdown-item:hover {
+          transform: none;
+          background-color: rgba(25, 135, 84, 0.1);
+          border-left: 3px solid #198754;
+     }
+
+     .dropdown-toggle::after {
+          float: right;
+          margin-top: 8px;
+     }
+}
+
+/* Telugu text styling */
+.telugu-text {
+     font-family: 'Ponnala', sans-serif;
+     line-height: 1.6;
+}
+
+/* Map Styles */
+.map-container {
+     transition: all 0.5s ease;
+     filter: grayscale(20%) contrast(1.1);
+}
+
+.map-container:hover {
+     filter: grayscale(0%) contrast(1);
+}
+
+.map-iframe {
+     transition: transform 0.5s ease;
+}
+
+.map-iframe:hover {
+     transform: scale(1.02);
+}
+
+/* Footer Base Styles */
+.footer-section {
+     position: relative;
+     overflow: hidden;
+}
+
+/* Links */
+.hover-light {
+     transition: all 0.3s ease;
+     text-decoration: none;
+     opacity: 0.9;
+}
+
+.hover-light:hover {
+     opacity: 1;
+     padding-left: 5px;
+     text-decoration: underline;
+}
+
+/* Map Container */
+.map-container {
+     transition: all 0.3s ease;
+}
+
+/* Social Icons */
+.social-icon {
+     width: 36px;
+     height: 36px;
+     transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+     transform: translateY(-3px) scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+     from {
+          opacity: 0;
+          transform: translateY(20px);
+     }
+
+     to {
+          opacity: 1;
+          transform: translateY(0);
+     }
+}
+
+.wow {
+     visibility: hidden;
+}
+
+.wow.fadeInUp {
+     animation-name: fadeInUp;
+     animation-duration: 0.8s;
+     animation-fill-mode: both;
+     visibility: visible;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+     .footer-section {
+          text-align: center;
+     }
+
+     .contact-info div {
+          justify-content: center;
+     }
+
+     .social-icons {
+          justify-content: center;
+     }
+}

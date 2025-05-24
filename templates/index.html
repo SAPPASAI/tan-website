@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <link href="https://fonts.googleapis.com/css2?family=Ponnala&display=swap" rel="stylesheet">
+     <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <!-- Animate.css -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+     <link rel="stylesheet" href="static/style.css">
+     <title>Telugu Association of Nigeria</title>
+
+</head>
+
+<body>
+     {% block header %}
+     <!-- Fixed Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm fixed-navbar">
+          <div class="container-fluid">
+               <a class="navbar-brand fw-bold  " href="/">
+                    <img src="static/images/gallery/image3.png" alt="TAN Logo" class="img-fluid logo">
+               </a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tanNavbar"
+                    aria-controls="tanNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+               </button>
+
+               <div class="collapse navbar-collapse" id="tanNavbar">
+
+
+                    <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
+                         <li class="nav-item">
+                              <a class="nav-link" href="/">Home</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="/about">About</a>
+                         </li>
+                         <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="leadershipDropdown" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                   Leadership
+                              </a>
+                              <ul class="dropdown-menu animate__animated animate__faster"
+                                   aria-labelledby="leadershipDropdown">
+                                   <li><a class="dropdown-item" href="/founders">
+                                             <i class="fas fa-user-shield me-2"></i>Founders
+                                        </a></li>
+                                   <li><a class="dropdown-item" href="/trustees">
+                                             <i class="fas fa-users me-2"></i>Trustees
+                                        </a></li>
+                                   <li><a class="dropdown-item" href="/previous-leadership">
+                                             <i class="fas fa-history me-2"></i>Previous Leadership
+                                        </a></li>
+                                   <li><a class="dropdown-item" href="/present-leadership">
+                                             <i class="fas fa-user-tie me-2"></i>Present Leadership
+                                        </a></li>
+                              </ul>
+                         </li>
+
+                         <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="membersDropdown" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                   Members
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="membersDropdown">
+                                   <li><a class="dropdown-item" href="/membership-form">
+                                             <i class="fas fa-file-signature me-2"></i>Membership Form
+                                        </a></li>
+                                   <li><a class="dropdown-item" href="/membership-benefits">
+                                             <i class="fas fa-gift me-2"></i>Membership Benefits
+                                        </a></li>
+                                   <li><a class="dropdown-item" href="/members-details">
+                                             <i class="fas fa-address-card me-2"></i>Members Details
+                                        </a></li>
+                              </ul>
+                         </li>
+                         <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="sponsorsDropdown" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                   Sponsors
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="sponsorsDropdown">
+                                   <li><a class="dropdown-item" href="/sponsors-slider">
+                                             <i class="fas fa-images me-2"></i>Sponsors Slider
+                                        </a></li>
+                                   <li><a class="dropdown-item" href="/sponsors-details">
+                                             <i class="fas fa-info-circle me-2"></i>Sponsors Details
+                                        </a></li>
+                              </ul>
+                         </li>
+                         <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="galleryDropdown" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                   Gallery
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="galleryDropdown">
+                                   <li><a class="dropdown-item" href="/gallery-old">
+                                             <i class="fas fa-photo-film me-2"></i>Old Pictures
+                                        </a></li>
+                                   <li><a class="dropdown-item" href="/gallery-current">
+                                             <i class="fas fa-camera me-2"></i>Current Pictures
+                                        </a></li>
+                              </ul>
+                         </li>
+                         <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="calendarDropdown" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                   Calendar
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="calendarDropdown">
+                                   <li><a class="dropdown-item" href="/events">
+                                             <i class="fas fa-calendar-day me-2"></i>Events
+                                        </a></li>
+                                   <li><a class="dropdown-item" href="/telugu-calendar">
+                                             <i class="fas fa-calendar-alt me-2"></i>Telugu Calendar
+                                        </a></li>
+                              </ul>
+                         </li>
+
+                         <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="sponsorsDropdown" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                   Temples
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="sponsorsDropdown">
+                                   <li>
+                                        <a class="dropdown-item" href="/temples">
+                                             <i class="fas fa-place-of-worship me-2"></i>List of Temples
+                                        </a>
+                                   </li>
+                              </ul>
+                         </li>
+                         <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="sponsorsDropdown" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                   corporate details
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="sponsorsDropdown">
+                                   <li>
+                                        <a class="dropdown-item" href="/jobs">
+                                             <i class="fas fa-search-plus me-2"></i>jobs
+                                        </a>
+                                   </li>
+                              </ul>
+                         </li>
+
+                         <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="sponsorsDropdown" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                   Articles
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="sponsorsDropdown">
+                                   <li>
+                                        <a class="dropdown-item" href="/articles">
+                                             <i class="fas fa-calendar-alt me-2"></i>Articles
+                                        </a>
+                                   </li>
+                              </ul>
+                         </li>
+
+                         <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                   Contact
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="contactDropdown">
+                                   <li><a class="dropdown-item" href="/contact">
+                                             <i class="fas fa-id-card me-2"></i>Contact IDs
+                                        </a></li>
+                                   <li><a class="dropdown-item" href="/emergency-contacts">
+                                             <i class="fas fa-phone-alt me-2"></i>Emergency Contacts
+                                        </a></li>
+                              </ul>
+                         </li>
+                    </ul>
+               </div>
+          </div>
+     </nav>
+
+     {% endblock header %}
+
+     {% block hed %} {% endblock hed %}
+
+     {% block social %}
+
+
+     <!-- Social Media Icons - Desktop Version -->
+     <div class="social-icons-desktop">
+          <a href="https://www.facebook.com/TAGDVTelugu/" target="_blank" class="facebook" aria-label="Facebook">
+               <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/tagdvphilly/" target="_blank" class="instagram" aria-label="Instagram">
+               <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/channel/UCfeAodcRkZ6LMEHcDKZJ7FA" target="_blank" class="youtube"
+               aria-label="YouTube">
+               <i class="fab fa-youtube"></i>
+          </a>
+          <a href="http://www.linkedin.com/company/tagdvtelugu" target="_blank" class="linkedin" aria-label="LinkedIn">
+               <i class="fab fa-linkedin-in"></i>
+          </a>
+     </div>
+
+     <!-- Social Media Icons - Mobile Version -->
+     <div class="social-icons-mobile">
+          <a href="https://www.facebook.com/TAGDVTelugu/" target="_blank" class="facebook" aria-label="Facebook">
+               <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/tagdvphilly/" target="_blank" class="instagram" aria-label="Instagram">
+               <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/channel/UCfeAodcRkZ6LMEHcDKZJ7FA" target="_blank" class="youtube"
+               aria-label="YouTube">
+               <i class="fab fa-youtube"></i>
+          </a>
+          <a href="http://www.linkedin.com/company/tagdvtelugu" target="_blank" class="linkedin" aria-label="LinkedIn">
+               <i class="fab fa-linkedin-in"></i>
+          </a>
+     </div>
+
+     {% endblock social %}
+
+     {% block content %}
+
+     <div class="container mt-4">
+          <h1 class="text-center mt-5 text-dark telugu-text">తెలుగు అసోసియేషన్ ఆఫ్ నైజీరియా</h1>
+
+          <div id="tanCarousel" class="carousel slide mb-4 shadow-lg" data-bs-ride="carousel">
+               <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#tanCarousel" data-bs-slide-to="0" class="active"
+                         aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#tanCarousel" data-bs-slide-to="1"
+                         aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#tanCarousel" data-bs-slide-to="2"
+                         aria-label="Slide 3"></button>
+               </div>
+               <div class="carousel-inner">
+                    <div class="carousel-item active">
+                         <img src="https://img.freepik.com/premium-photo/beautiful-national-state-flags-nigeria-india-together_337817-2755.jpg"
+                              class="d-block w-100" alt="TAN Event 1">
+                         <div class="carousel-caption d-none d-md-block text-dark">
+                              <h4>Welcome to TAN</h4>
+                              <p>Telugu Association Website - Celebrating Unity & Culture</p>
+                         </div>
+                    </div>
+                    <div class="carousel-item">
+                         <img src="https://www.travellersofindia.com/wp-content/uploads/2021/05/The_Unique_Culture_of_India_5_Major_Traditions__Indian_Customs_TravellersofIndia.jpg"
+                              class="d-block w-100" alt="TAN Event 2">
+                         <div class="carousel-caption d-none d-md-block text-dark">
+                              <h4>Annual Cultural Program</h4>
+                              <p>Join us for vibrant performances and celebrations</p>
+                         </div>
+                    </div>
+                    <div class="carousel-item">
+                         <img src="https://cdn.gulte.com/wp-content/uploads/2022/10/AP-Telangana-bifurcation.jpg"
+                              class="d-block w-100" alt="TAN Sponsors">
+                         <div class="carousel-caption d-none d-md-block text-dark">
+                              <h4>Thank You Sponsors</h4>
+                              <p>Your support makes it all possible</p>
+                         </div>
+                    </div>
+               </div>
+               <button class="carousel-control-prev" type="button" data-bs-target="#tanCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+               </button>
+               <button class="carousel-control-next" type="button" data-bs-target="#tanCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+               </button>
+          </div>
+     </div>
+
+     {% endblock content %}
+
+
+
+     {% block footer %}
+
+     <footer class="footer-section bg-success text-white pt-5 pb-4">
+          <div class="container">
+               <div class="row g-4">
+
+                    <!-- About Column -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                         <div class="h-100 pe-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                              <h5 class="text-uppercase mb-4">About TAN</h5>
+                              <p class="mb-4">Telugu Association of Nigeria connects Telugu people through cultural
+                                   events, community service, and social networking.</p>
+                              <div class="contact-info">
+                                   <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-map-marker-alt me-3"></i>
+                                        <span>123 Cultural Street, Lagos, Nigeria</span>
+                                   </div>
+                                   <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-phone-alt me-3"></i>
+                                        <span>+234 800 123 4567</span>
+                                   </div>
+                                   <div class="d-flex align-items-center">
+                                        <i class="fas fa-envelope me-3"></i>
+                                        <span>contact@tan.org.ng</span>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <!-- Quick Links Column -->
+                    <div class="col-lg-2 col-md-6 mb-4">
+                         <div class="h-100 wow fadeInUp" data-wow-delay="0.2s">
+                              <h5 class="text-uppercase mb-4">Quick Links</h5>
+                              <ul class="list-unstyled">
+                                   <li class="mb-2"><a href="/" class="text-white hover-light">Home</a></li>
+                                   <li class="mb-2"><a href="/about" class="text-white hover-light">About Us</a></li>
+                                   <li class="mb-2"><a href="/events" class="text-white hover-light">Events</a></li>
+                                   <li class="mb-2"><a href="/gallery" class="text-white hover-light">Gallery</a></li>
+                                   <li><a href="/contact" class="text-white hover-light">Contact</a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <!-- Resources Column -->
+                    <div class="col-lg-2 col-md-6 mb-4">
+                         <div class="h-100 wow fadeInUp" data-wow-delay="0.3s">
+                              <h5 class="text-uppercase mb-4">Resources</h5>
+                              <ul class="list-unstyled">
+                                   <li class="mb-2"><a href="/membership" class="text-white hover-light">Membership</a>
+                                   </li>
+                                   <li class="mb-2"><a href="/documents" class="text-white hover-light">Documents</a>
+                                   </li>
+                                   <li class="mb-2"><a href="/calendar" class="text-white hover-light">Calendar</a></li>
+                                   <li class="mb-2"><a href="/sponsors" class="text-white hover-light">Sponsors</a></li>
+                                   <li><a href="/faq" class="text-white hover-light">FAQ</a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <!-- Contact & Social Column -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                         <div class="h-100 wow fadeInUp" data-wow-delay="0.4s">
+                              <h5 class="text-uppercase mb-4">Connect With Us</h5>
+
+                              <!-- Google Map -->
+                              <div class="map-container mb-4 rounded overflow-hidden border border-white border-2">
+                                   <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.585565156049!2d3.379295415231633!3d6.453326325820974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1620000000000!5m2!1sen!2sng"
+                                        width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy">
+                                   </iframe>
+                              </div>
+
+                              <!-- Social Icons -->
+                              <div class="social-icons d-flex gap-3 mb-4">
+                                   <a href="#"
+                                        class="social-icon rounded-circle d-flex align-items-center justify-content-center bg-white text-success">
+                                        <i class="fab fa-facebook-f"></i>
+                                   </a>
+                                   <a href="#"
+                                        class="social-icon rounded-circle d-flex align-items-center justify-content-center bg-white text-success">
+                                        <i class="fab fa-twitter"></i>
+                                   </a>
+                                   <a href="#"
+                                        class="social-icon rounded-circle d-flex align-items-center justify-content-center bg-white text-success">
+                                        <i class="fab fa-instagram"></i>
+                                   </a>
+                                   <a href="#"
+                                        class="social-icon rounded-circle d-flex align-items-center justify-content-center bg-white text-success">
+                                        <i class="fab fa-youtube"></i>
+                                   </a>
+                              </div>
+
+                              <!-- Newsletter -->
+                              <div class="newsletter">
+                                   <h6 class="mb-3">Subscribe to Newsletter</h6>
+                                   <form class="d-flex gap-2">
+                                        <input type="email" class="form-control form-control-sm bg-white"
+                                             placeholder="Your Email">
+                                        <button class="btn btn-sm btn-light text-success" type="submit">
+                                             <i class="fas fa-paper-plane"></i>
+                                        </button>
+                                   </form>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+
+          </div>
+
+          <!-- Copyright -->
+
+          <p class="mb-0 small text-center text-white mt-3 mb-3 ">
+               © 2025 Telugu Association of Nigeria. All Rights Reserved.
+          </p>
+
+     </footer>
+     {% endblock footer %}
+     <!-- Bootstrap JS -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
